@@ -1,2 +1,2 @@
-require('./tests/example');
-//require('./tests/work1');
+//require('./tests/example');
+require('./tests/task1');
