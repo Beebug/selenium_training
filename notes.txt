@@ -1,0 +1,25 @@
+6.12
+- tried different code editors/IDEs
+- installed selenium webdriver, mocha, choromedriver
+- choose VisualStudioCode
+- integrated terminal
+  -which smth - shows path
+  -npm - installs modules
+  -node - runs code
+  -npm init -y -creates package.json file
+  -npm install -S selenium-webdriver
+  -npm i -S mocha
+  -(i = install, -S saves file after creating)
+  -npm i -g mocha - update globally
+  -echo $PATH
+  -brew install chromedriver
+  -if copy package.json and run npm install, all required dependancies get installed
+  -mocha -t 10000 - runs js file 
+  -git add --a - adds all new files
+  -gs - git status (shows modified, new files)
+  -alias - allows to create shortcuts in terminal
+  -git commit -am "comment about commit here"
+  -git log - useful info
+  -git push origin master
+  -npm start - configured in package.json, shortcut for running js file (instead of mocha -t 10000)
+  
