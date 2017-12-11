@@ -25,6 +25,7 @@ test.describe('Login to litecart admin area', function () {
         driver.manage().timeouts().implicitlyWait(10);
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");
+        driver.manage().timeouts().implicitlyWait(10);
 
 
     });
