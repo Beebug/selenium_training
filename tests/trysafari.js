@@ -1,27 +1,34 @@
 var webdriver = require('selenium-webdriver'),
-    chrome = require('selenium-webdriver/chrome'),
     By = webdriver.By,
-    until = webdriver.until,
+    until = webdriver.until;
+
+
+safari = require('selenium-webdriver/safari'),
     test = require('selenium-webdriver/testing');
 
-test.describe('Open BBC Page', function () {
+test.describe('Login to litecart admin area', function () {
     var driver;
 
     test.before(function () {
-        var options = new chrome.Options();
-        options.addArguments(["start-fullscreen"]);
+
 
         driver = new webdriver.Builder()
-            .forBrowser('chrome')
-            .setChromeOptions(options)
+
+            .forBrowser('safari')
             .build();
         driver.getCapabilities().then(function (caps) {
             console.log(caps);
         });
     });
 
-    test.it('should open and close BBC page', function () {
-        driver.get('http://www.bbc.co.uk');
+    test.it('should log to litecart admin area', function () {
+        driver.manage().window().maximize();
+        driver.get('http://localhost/litecart/admin');
+        driver.manage().timeouts().implicitlyWait(20);
+        driver.findElement(By.name("username")).sendKeys("admin");
+        driver.findElement(By.name("password")).sendKeys("admin");
+        driver.manage().timeouts().implicitlyWait(10);
+
 
     });
 
