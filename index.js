@@ -1,2 +1,3 @@
 //require('./tests/example');
 require('./tests/task1');
+//require('./tests/tryfirefox');
